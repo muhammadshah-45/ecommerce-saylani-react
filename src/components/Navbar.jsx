@@ -38,7 +38,7 @@ export const Navbar = () => {
         <CiHeart size={24}/>
         <CiShoppingCart size={24}/>
      </div>
-     <div className='md:hidden xsm:flex xsm:gap-3  sm:flex  sm:gap-2 sm:justify-center' >
+     <div className='md:hidden xsm:flex xsm:gap-3  sm:flex z-50  sm:gap-2 sm:justify-center' >
       <CiHeart size={24}  />
       <CiShoppingCart size={24} />
       
@@ -46,7 +46,7 @@ export const Navbar = () => {
         id="menu-btn"
         onClick={toggleMenu }
         className={`relative block cursor-pointer w-[24px] h-[24px] transition-all duration-200 ease-in md:hidden focus:outline-none ${hamburger && "open"}`}>
-          {hamburger ? <AiOutlineClose /> : <AiOutlineMenu/>}
+          {hamburger ? <AiOutlineClose color='black' size={20}/> : <AiOutlineMenu/>}
           {/* <span className="absolute top-1 left-0 w-[24px] h-[2px] rounded-lg bg-gray-500 transform rotate-0 "></span>
           <span className="absolute top-[3px]  right-0 w-[16px] rounded-lg h-[2px] bg-gray-500 transform rotate-0 translate-y-2"></span>
           <span className="absolute top-1 left-0 w-[24px] h-[2px] rounded-lg bg-gray-500 transform rotate-0 translate-y-[14px]"></span> */}
@@ -54,12 +54,12 @@ export const Navbar = () => {
           </div>
       </div>
      {/* Mobile Menu  */}
-     <div className="md:hidden ">
-      <div className={`w-auto px-[12rem] xsm:w-[340px]  xsm:py-14 xsm:px-14 py-[10rem] rounded-md shadow-sm absolute flex-col items-center  justify-center  mt-[6px] space-y-6 mx-0 bg-[#f5f5f4] sm:w-[638px] sm:py-24 sm:self-center top-[3.7rem] ${hamburger ? 'flex': "hidden"}  right-1 drop-shadow-md sm:${hamburger ? "flex" : "hidden"}`}>
-         <a href="#" className="w-[350px] border-b-2 uppercase text-xl border-transparent hover:border-b-2 hover:border-black text-black">Home</a>
-         <a href="#" className="w-[350px] border-b-2 uppercase text-xl border-transparent hover:border-b-2 hover:border-black text-black">Contact</a>
-         <a href="#" className="w-[350px] border-b-2 uppercase text-xl border-transparent hover:border-b-2 hover:border-black text-black">About</a>
-         <a href="#" className="w-[350px] border-b-2 uppercase text-xl border-transparent hover:border-b-2 hover:border-black text-black">Sign Up</a>
+     <div className={`md:hidden fixed left-0 top-0 w-full min-h-screen ${hamburger ? "bg-[#f5f5f5]" : ''} z-40 `}>
+      <div className={`fixed font-semibold text-4xl text-gray-700 space-y-8   w-full h-screen justify-center items-center flex-col text-center ${hamburger ? "transform-none":"transform-[-100%]"}  ${hamburger ? 'flex': "hidden"}   sm:${hamburger ? "flex" : "hidden"}`}>
+         <a href="#" className="uppercase ">Home</a>
+         <a href="#" className=" uppercase ">Contact</a>
+         <a href="#" className=" uppercase ">About</a>
+         <a href="#" className=" uppercase ">Sign Up</a>
 
       </div>
      </div>
