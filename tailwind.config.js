@@ -2,12 +2,13 @@
 module.exports = {
     darkMode: ["class"],
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
+	
   theme: {
 	screens:{
 		// xxs: "280px",
-		xxs: { min: "0px", max: "350px" },
-		xs: { min: "351px", max: "639px" },
-		xsm: { min: "0px", max: "639px" },
+		// xxs: { min: "0px", max: "350px" },
+		// xs: { min: "351px", max: "639px" },
+		xsm: { min: "340px", max: "639px" },
 		sm: "640px",
 		// => @media (min-width: 640px) { ... }
 		md: "768px",
@@ -81,5 +82,8 @@ module.exports = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+	require("tailwindcss-animate"),
+    
+  ],
 }
