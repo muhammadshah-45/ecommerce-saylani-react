@@ -56,10 +56,10 @@ export const Navbar = () => {
      {/* Mobile Menu  */}
      <div className={`md:hidden fixed left-0 top-0 w-full min-h-screen ${hamburger ? "bg-[#f5f5f5]" : ''} z-40 `}>
       <div className={`fixed font-semibold text-4xl text-gray-700 space-y-8   w-full h-screen justify-center items-center flex-col text-center ${hamburger ? "transform-none":"transform-[-100%]"}  ${hamburger ? 'flex': "hidden"}   sm:${hamburger ? "flex" : "hidden"}`}>
-         <a href="#" className="uppercase ">Home</a>
-         <a href="#" className=" uppercase ">Contact</a>
-         <a href="#" className=" uppercase ">About</a>
-         <a href="#" className=" uppercase ">Sign Up</a>
+         <a href="#" className="uppercase hover:border-none hover:[text-shadow:_0_10px_12px_rgb(0_0_0_/_40%)] ">Home</a>
+         <a href="#" className=" uppercase hover:border-none hover:[text-shadow:_0_10px_12px_rgb(0_0_0_/_40%)] ">Contact</a>
+         <a href="#" className=" uppercase hover:border-none hover:[text-shadow:_0_10px_12px_rgb(0_0_0_/_40%)] ">About</a>
+         <a href="#" className=" uppercase hover:border-none hover:[text-shadow:_0_10px_12px_rgb(0_0_0_/_40%)] ">Sign Up</a>
 
       </div>
      </div>

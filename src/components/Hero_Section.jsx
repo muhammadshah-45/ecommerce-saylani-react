@@ -14,7 +14,7 @@ const carouselItems1 = [
     title:"Canon 3 Series",
     imgSrc:cameraLogo,
     imgBanner:camera,
-    description :"Capturing one Lens Cameras"
+    description :"Lens Cameras"
    },
    {
     id:2,
@@ -28,7 +28,7 @@ const carouselItems1 = [
     title:"Gamepad 4 Series",
     imgSrc:remoteLogo,
     imgBanner:remote,
-    description :"Gaming RENO LTx-50"
+    description :"Gaming RENO L-50"
    },
 ]
 
