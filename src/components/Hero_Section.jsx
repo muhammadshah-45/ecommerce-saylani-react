@@ -47,7 +47,7 @@ export const Hero_Section = () => {
 
   }
   return (
-    <section className='lg:w-[82%] md:w-[84%] sm:w-[94%] xsm:w-[90%]  xxs:w-[90%]  mx-auto mt-8 bg-black   '>
+    <section className='lg:w-[82%]  md:w-[84%] sm:w-[94%] xsm:w-[90%] mt-8  xxs:w-[90%]  mx-auto  bg-black   '>
       <div className=' w-full flex items-center justify-between '>
       <div className=' lg:w-[40%] md:w-[50%] xxs:w-[50%] h-[349px]  xs:h-[200px] xsm:h-[300px] xs:p-4 xs:w-[50%]   xxs:p-3 xxs:items-center xxs:justify-center  xsm:w-[50%] px-8 py-14 flex  flex-col justify-start items-center xsm:gap-0 xs:gap-0 xs:justify-center xs:items-center gap-4 '>
          <button onClick={next} className='hidden text-white'> Next</button>

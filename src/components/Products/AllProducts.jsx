@@ -8,10 +8,12 @@ import { toggleFavorite } from "@/src/Slices/FavoriteSlice";
 import { toggleCart } from "@/src/Slices/CartSlice";
 import { useState } from "react";
 import { FaHeart } from "react-icons/fa6";
-export const FlashSalesProducts = () => {
+export const AllProducts = () => {
   const [heart,setHeart] = useState(false)
    // Initialize favorites as an empty object  
    const [favorites, setFavorites] = useState({});  
+   const [addProduct, setAddProduct] = useState({});  
+
   const {products,isLoading,message} = useSelector(state=>state.product)
   const cart = useSelector(state => state.cart)
   console.log(cart)
@@ -22,6 +24,8 @@ export const FlashSalesProducts = () => {
     dispatch(toggleFavorite(product));  
   };  
   const handleAddToCart = (data)=>{
+    const updateCart = {...addProduct,[data.id]: !addProduct[data.id]}
+    setAddProduct(updateCart)
     dispatch(toggleCart(data))
   }
   return (
@@ -31,7 +35,7 @@ export const FlashSalesProducts = () => {
         {/*Flash Sales Products  */}
         <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 my-4">
           {/* Product 1 */}
-          {products.slice(0,4).map((product)=>(
+          {products.map((product)=>(
  <div className="flex justify-start gap-1 items-start  flex-col" key={product?.id}>
  <div className="bg-[#f5f5f5] h-[230px] px-4 rounded-sm relative w-full flex justify-center items-center flex-col">
    <img src={product?.category?.image} className="w-full" alt="" />
@@ -40,7 +44,7 @@ export const FlashSalesProducts = () => {
    </span>
    <IoEyeOutline className="absolute top-[12px] right-[10px] bg-white p-1 text-[24px] cursor-pointer rounded-[50px]"  />
    <FaHeart  className={`absolute top-10 right-[10px] ${favorites[product.id] ? 'text-red-500': <CiHeart/>} bg-white p-1 text-[24px] cursor-pointer rounded-[50px]`} onClick={()=> handleFavorite(product)} />
-   <Link onClick={()=> handleAddToCart(product)} className="w-full rounded-b-sm font-poppins font-medium text-[16px] absolute bottom-0 hover:visible  hover:bg-black text-transparent transition-all duration-500 ease-out hover:text-white py-1">Add to Cart</Link>
+   <Link onClick={()=> handleAddToCart(product)} className={`w-full ${addProduct[product.id] ? "text-white" : "text-white"} rounded-b-sm font-poppins font-medium text-[16px] absolute bottom-0 hover:visible bg-gray-700 hover:font-semibold hover:bg-black text-transparent transition-all duration-500 ease-out  py-1`}>{addProduct[product.id] ? "Added" : "Add to Cart"}</Link>
  </div>
  <h1 className="w-full  max-w-full  font-poppins font-medium text-[16px] text-black">
  {product?.title}
@@ -67,10 +71,8 @@ export const FlashSalesProducts = () => {
 
 
         </div>
-        <div className="w-full my-7 flex justify-center items-center ">
-        <Link to='/all-products' className="rounded-sm bg-[#db4444] py-4 px-12 text-[16px] text-white font-poppins font-medium leading-tight ">View All Products</Link>
-        </div>
-        <div className="w-full bg-black opacity-25 h-[1px] mb-2"></div>
+        
+       
       </section>
     </>
   );

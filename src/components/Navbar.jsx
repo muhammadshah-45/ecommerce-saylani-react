@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom'
 import { CiHeart, CiSearch, CiShoppingCart } from 'react-icons/ci'
 import { AiOutlineClose,AiOutlineMenu } from 'react-icons/ai'
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
 export const Navbar = () => {
   const [hamburger,setHamburger] = useState(false)
   
+    const {favoriteProducts,message} = useSelector(state=>state.favorite)
+    const {cartProducts} = useSelector(state => state.cart)
+    
   const toggleMenu = ()=>{
     setHamburger(!hamburger)
   }
@@ -15,15 +19,19 @@ export const Navbar = () => {
   
   return (
     <>
-    <div className='w-full md:w-full border-b border-b-gray-300 h-[4rem] pb-2 flex items-end justify-between'>
-      <div className=' flex w-[94%] md:w-full mx-auto lg:items-center  md:justify-around sm:gap-4 justify-between md:items-center items-center '>
-      <div className='w-auto flex items-center md:gap-6  lg:gap-10'>
+    <div className='w-full  md:w-full border-b border-b-gray-300 h-[4rem] pb-2 flex items-end justify-between'>
+      <div className=' flex w-[94%] z-30 md:w-full mx-auto lg:items-center  md:justify-around sm:gap-4 justify-between md:items-center items-center '>
+      <div className='w-auto z-40 flex items-center md:gap-6  lg:gap-10'>
         <h1 className='font-inter font-bold md:text-[16px] sm:text-[16px] lg:text-[24px] tracking-wide'>Shah's Store</h1>
-        <ul className='hidden w-auto h-auto md:flex lg:mt-[0px] lg:gap-7  md:mt-[0px] transition-all duration-500 font-poppins lg:text-[16px] md:text-[12px] md:gap-3 gap-9'>
-            <li className='hover:border-b-[1.4px] md:pb-[1px] hover:md:p-0 hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Home</li>
-            <li className='hover:border-b-[1.4px] md:pb-[1px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Contact</li>
-            <li className='hover:border-b-[1.4px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>About</li>
-            <li className='hover:border-b-[1.4px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Sign Up</li>
+        <ul className='hidden w-auto z-50 h-auto md:flex lg:mt-[0px] lg:gap-7  md:mt-[0px] transition-all duration-500 font-poppins lg:text-[16px] md:text-[12px] md:gap-3 gap-9'>
+            <Link to={'/'} className='hover:border-b-[1.4px] md:pb-[1px] hover:md:p-0 hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Home</Link>
+            <Link to={'/contact'}className='hover:border-b-[1.4px] md:pb-[1px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Pages</Link>
+            <Link to={'/all-products'}className='hover:border-b-[1.4px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Products</Link>
+            <Link to={'/signup'}className='hover:border-b-[1.4px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Blog</Link>
+            <Link to={'/signup'}className='hover:border-b-[1.4px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Shop</Link>
+            <Link to={'/signup'}className='hover:border-b-[1.4px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Contact</Link>
+
+
 
             {/* <li className='hover:border-b-[1.4px] md:p-[2px] hover:border-transparent md:border-b md:border-transparent md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer ' >Contact</li>
             <li className='hover:border-b-[1.4px] md:p-[2px] hover:border-transparent md:border-b md:border-transparent md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer hover:border-gray-500'>About</li>
@@ -35,8 +43,14 @@ export const Navbar = () => {
             <input className='w-[200px] placeholder:font-poppins font-poppins text-[12px] font-normal bg-transparent  outline-none placeholder:text-left' placeholder='What are you looking for?' type="text" name="" id="" />
             <CiSearch className='absolute top-[10px] right-[8px]' size={20}/>
         </div>
-        <CiHeart size={24}/>
+        <Link to={'/favorite'} className='relative '>
+        <CiHeart  size={24}/>
+        <span className={`absolute -top-1 pl-[1px]  bg-black w-5  h-5 rounded-full flex justify-center ${favoriteProducts.length <=0 ? "invisible" : "visible"} items-center text-white left-3`}>{favoriteProducts?.length}</span>
+        </Link>
+        <Link to='/cart' className='relative'>
         <CiShoppingCart size={24}/>
+        <span className='absolute -top-1 pl-[1px]  bg-black w-5  h-5 rounded-full flex justify-center items-center text-white left-3'>{cartProducts?.length}</span>
+        </Link>
      </div>
      <div className='md:hidden xsm:flex xsm:gap-3  sm:flex z-50  sm:gap-2 sm:justify-center' >
       <CiHeart size={24}  />
