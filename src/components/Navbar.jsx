@@ -25,7 +25,7 @@ export const Navbar = () => {
         <h1 className='font-inter font-bold md:text-[16px] sm:text-[16px] lg:text-[24px] tracking-wide'>Shah's Store</h1>
         <ul className='hidden w-auto z-50 h-auto md:flex lg:mt-[0px] lg:gap-7  md:mt-[0px] transition-all duration-500 font-poppins lg:text-[16px] md:text-[12px] md:gap-3 gap-9'>
             <Link to={'/'} className='hover:border-b-[1.4px] md:pb-[1px] hover:md:p-0 hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Home</Link>
-            <Link to={'/contact'}className='hover:border-b-[1.4px] md:pb-[1px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Pages</Link>
+            <Link to={'/pages'}className='hover:border-b-[1.4px] md:pb-[1px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Pages</Link>
             <Link to={'/all-products'}className='hover:border-b-[1.4px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Products</Link>
             <Link to={'/signup'}className='hover:border-b-[1.4px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Blog</Link>
             <Link to={'/signup'}className='hover:border-b-[1.4px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Shop</Link>
@@ -70,10 +70,13 @@ export const Navbar = () => {
      {/* Mobile Menu  */}
      <div className={`md:hidden fixed left-0 top-0 w-full min-h-screen ${hamburger ? "bg-[#f5f5f5]" : ''} z-40 `}>
       <div className={`fixed font-semibold text-4xl text-gray-700 space-y-8   w-full h-screen justify-center items-center flex-col text-center ${hamburger ? "transform-none":"transform-[-100%]"}  ${hamburger ? 'flex': "hidden"}   sm:${hamburger ? "flex" : "hidden"}`}>
-         <a href="#" className="uppercase hover:border-none hover:[text-shadow:_0_10px_12px_rgb(0_0_0_/_40%)] ">Home</a>
-         <a href="#" className=" uppercase hover:border-none hover:[text-shadow:_0_10px_12px_rgb(0_0_0_/_40%)] ">Contact</a>
-         <a href="#" className=" uppercase hover:border-none hover:[text-shadow:_0_10px_12px_rgb(0_0_0_/_40%)] ">About</a>
-         <a href="#" className=" uppercase hover:border-none hover:[text-shadow:_0_10px_12px_rgb(0_0_0_/_40%)] ">Sign Up</a>
+         <Link to="/" className="uppercase hover:border-none hover:[text-shadow:_0_10px_12px_rgb(0_0_0_/_40%)] ">Home</Link>
+         <Link to="/pages" className=" uppercase hover:border-none hover:[text-shadow:_0_10px_12px_rgb(0_0_0_/_40%)] ">Pages</Link>
+         <Link href="/all-products" className=" uppercase hover:border-none hover:[text-shadow:_0_10px_12px_rgb(0_0_0_/_40%)] ">Products</Link>
+         <Link href="/blog" className=" uppercase hover:border-none hover:[text-shadow:_0_10px_12px_rgb(0_0_0_/_40%)] ">Blog</Link>
+         <Link href="/shop" className=" uppercase hover:border-none hover:[text-shadow:_0_10px_12px_rgb(0_0_0_/_40%)] ">Blog</Link>
+         <Link href="/contact" className=" uppercase hover:border-none hover:[text-shadow:_0_10px_12px_rgb(0_0_0_/_40%)] ">Contact</Link>
+
 
       </div>
      </div>

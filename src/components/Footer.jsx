@@ -6,9 +6,9 @@ import instagram from '../../src/assets/productimages/icon2.png'
 export const Footer = () => {
   return (
     <>
-    <div className='w-full bg-[#EEEFFB] p-4 flex justify-center gap-5 items-center '>
-     <div className='w-[23%]  flex gap-2 items-start flex-col justify-start'>
-     <h1 className='font-bold text-3xl'>Hekto</h1>
+    <div className='w-full  bg-[#EEEFFB] p-4 flex justify-center gap-5 items-center '>
+     <div className='w-[23%]  flex gap-2 items-start  flex-col justify-start'>
+     <h1 className='font-bold text-3xl font-josefin'>Shah's Store</h1>
      <div className='bg-white flex items-center  border border-gray-300'>
         <input type="email" placeholder='Enter Email Address' className='px-1' name="" id="" />
         <button className='bg-pink-400 px-1 text-white font-medium py-0'>Sign Up</button>
@@ -16,8 +16,8 @@ export const Footer = () => {
      <span className='text-sm text-gray-400'>Contact Info</span>
      <p className='text-left text-sm text-gray-400'>17 Princess Road, London, Greater London NW1 8JR, UK</p>
      </div>
-     <div className='w-[20%] flex flex-col mt-6 justify-start items-start gap-1 '>
-        <h1 className='font-semibold '>Categories</h1>
+     <div className='w-[20%]  flex flex-col mt-6 justify-start items-start gap-1 '>
+        <h1 className='font-semibold font-josefin '>Categories</h1>
         <span className='text-gray-400 text-[16px]'>Laptops & Computers</span>
         <span className='text-gray-400 text-[16px]'>Cameras & Computers</span>
         <span className='text-gray-400 text-[16px]'>Laptops & Computers</span>
@@ -26,7 +26,7 @@ export const Footer = () => {
 
      </div>
      <div className='w-[20%] flex flex-col mt-6 justify-start items-start gap-1 '>
-        <h1 className='font-semibold '>Customer Care</h1>
+        <h1 className='font-semibold  font-josefin'>Customer Care</h1>
         <span className='text-gray-400 text-[16px]'>My Account</span>
         <span className='text-gray-400 text-[16px]'>Discount</span>
         <span className='text-gray-400 text-[16px]'>Returns</span>
@@ -34,7 +34,7 @@ export const Footer = () => {
         <span className='text-gray-400 text-[16px]'>Laptops & Computers</span>
      </div>
      <div className='w-[20%] flex flex-col mt-7 justify-start items-start gap-1 '>
-        <h1 className='font-semibold '>Pages</h1>
+        <h1 className='font-semibold font-josefin'>Pages</h1>
         <span className='text-gray-400 text-[16px]'>My Account</span>
         <span className='text-gray-400 text-[16px]'>Discount</span>
         <span className='text-gray-400 text-[16px]'>Returns</span>

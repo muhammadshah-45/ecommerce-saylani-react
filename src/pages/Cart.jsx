@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux'
 import img from '@/src/assets/productimages/camera.png'
 import { CiHeart, CiShoppingCart, CiZoomIn } from 'react-icons/ci'
 import cart from '@/src/assets/shopping-cart/cart.png'
+import { Link } from 'react-router-dom'
+
 export const Cart = () => {
   const {cartProducts,message} = useSelector(state=>state.cart)
   console.log(cartProducts)
@@ -36,7 +38,9 @@ export const Cart = () => {
    </div>
    <p>{product?.description}</p>
    <div className='flex justify-center items-center'>
+    <Link to={'/shopping-cart'}>
      <CiShoppingCart size={20} />
+    </Link>
      <CiHeart />
      <CiZoomIn />
    </div>

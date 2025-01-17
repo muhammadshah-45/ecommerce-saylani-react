@@ -14,10 +14,14 @@ const cartSlice = createSlice({
            }else{
             state.cartProducts.push(action.payload)
            }
+        },
+        clearCart:(state)=>{
+            state.cartProducts = []
         }
+
     }
 })
 
 
-export const {toggleCart } = cartSlice.actions;
+export const {toggleCart ,clearCart } = cartSlice.actions;
 export default cartSlice.reducer

@@ -32,6 +32,7 @@ module.exports = {
 		fontFamily:{
 			"inter":[ "Inter", "serif"],
 			'poppins':["Poppins"],
+			'josefin':["Josefin Sans"],
 		},
   		borderRadius: {
   			lg: 'var(--radius)',

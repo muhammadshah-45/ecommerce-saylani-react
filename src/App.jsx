@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import {Routes,Route} from 'react-router-dom'
 import { Products } from './pages/Products'
-import { Contact } from './pages/Contact'
+import { Pages } from './pages/Pages'
 import { Login } from './pages/Login'
 import { Home } from './pages/Home'
 import { Navbar } from './components/Navbar'
@@ -16,7 +16,7 @@ import { FlashSalesProducts } from './components/Products/FlashSalesProducts'
 import  {Cart}  from './pages/Cart'
 import { FilterProducts } from './pages/FilterProducts'
 import { AllProducts } from './components/Products/AllProducts'
-import Pr from './pages/Pr'
+import ShopList from './pages/ShopList'
 import { ShoppingCart } from './components/ShoppingCart'
 import { Footer } from './components/Footer'
 
@@ -31,14 +31,15 @@ function App() {
  <Routes>
   <Route index element={<Home/>}/>
   <Route path='/products' element={<FlashSalesProducts/>}/>
-  <Route path='/contact' element={<Contact/>}/>
+  <Route path='/pages' element={<Pages/>}/>
   <Route path='/login' element={<Login/>}/>
   <Route path='/favorite' element = {<Favorite />} />
   <Route path='/cart' element ={<Cart/>} />
   <Route path='/filter' element = {<FilterProducts />} />
-  <Route path='p' element = {<Pr />}/>
+  <Route path='/shop-list' element = {<ShopList />}/>
   <Route path='/all-products' element = {<AllProducts />} />
   <Route path='/shopping-cart' element = {<ShoppingCart />} />
+
  </Routes>
  <Footer />
     </>

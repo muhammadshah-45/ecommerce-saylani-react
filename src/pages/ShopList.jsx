@@ -10,7 +10,7 @@ import img6 from '../../src/assets/productimages/product6.png'
 import img7 from  '../../src/assets/productimages/product7.png'
 import partnerImg from '../../src/assets/productimages/partnerimg.png'
 
-  const Pr = () => {
+  const ShopList = () => {
   const products = [
     {
       id:1,
@@ -110,7 +110,7 @@ import partnerImg from '../../src/assets/productimages/partnerimg.png'
       {/* Product List */}
       { products?.map((product)=>(
 
-      <div className='w-[84%] my-2  mx-auto'>
+      <div key={product.id} className='w-[84%] my-2  mx-auto'>
     <div className='w-[98%] bg-white shadow-custom rounded-lg p-2  '>
      <div className='flex justify-start gap-10 items-center '>
       <div className=' '>
@@ -162,4 +162,4 @@ import partnerImg from '../../src/assets/productimages/partnerimg.png'
 
 
 
-export default Pr;
+export default ShopList;
