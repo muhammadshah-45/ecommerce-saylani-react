@@ -27,15 +27,12 @@ export const Navbar = () => {
             <Link to={'/'} className='hover:border-b-[1.4px] md:pb-[1px] hover:md:p-0 hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Home</Link>
             <Link to={'/pages'}className='hover:border-b-[1.4px] md:pb-[1px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Pages</Link>
             <Link to={'/all-products'}className='hover:border-b-[1.4px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Products</Link>
-            <Link to={'/signup'}className='hover:border-b-[1.4px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Blog</Link>
-            <Link to={'/signup'}className='hover:border-b-[1.4px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Shop</Link>
-            <Link to={'/signup'}className='hover:border-b-[1.4px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Contact</Link>
+            <Link to={'/blog'}className='hover:border-b-[1.4px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Blog</Link>
+            <Link to={'/shop'}className='hover:border-b-[1.4px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Shop</Link>
+            <Link to={'/contact'}className='hover:border-b-[1.4px] hover:border-transparent border-transparent md:border-b md:border-transparent  md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer'>Contact</Link>
 
 
 
-            {/* <li className='hover:border-b-[1.4px] md:p-[2px] hover:border-transparent md:border-b md:border-transparent md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer ' >Contact</li>
-            <li className='hover:border-b-[1.4px] md:p-[2px] hover:border-transparent md:border-b md:border-transparent md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer hover:border-gray-500'>About</li>
-            <li className='hover:border-b-[1.4px] md:p-[2px] hover:border-transparent md:border-b md:border-transparent md:hover:border-b-[1.4px] md:hover:border-gray-500  cursor-pointer hover:border-gray-500' >Sign Up</li> */}
         </ul>
      </div>
      <div className='w-auto md:flex  gap-4 items-center hidden'>

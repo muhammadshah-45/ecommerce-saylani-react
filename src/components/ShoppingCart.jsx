@@ -266,45 +266,46 @@ export const ShoppingCart = () => {
             <div className="w-[97%] flex gap-4 flex-col mx-auto bg-[#F4F4FC] py-10 p-2 rounded-md">
                    
                    <div className="flex space-y-2 flex-col ">
-                   <div className="flex justify-between px-3">
-                        <span>Subtotals:</span>
+                   <div className="flex justify-between text-[#1D3178] font-poppins px-3">
+                        <span className="font-medium text-[18px]">Subtotals:</span>
                         <span>$219.00</span>
                     </div>
-                    <div className="w-[93%] my-1 mx-auto bg-slate-500 h-[1.5px]"></div>
-                    <div className="flex justify-between items-center px-3">
-                    <span>Totals:</span>
+                    <div className="w-[93%] my-1 mx-auto bg-[#E8E6f1] h-[2px]"></div>
+                    <div className="flex justify-between font-poppins text-[#1D3178] items-center px-3">
+                    <span className="font-medium text-[18px]">Totals:</span>
                     <span>$349.00</span>
                     </div>
-                    <div className="w-[93%] my-1 mx-auto bg-slate-500 h-[1.2px]"></div>
+                    <div className="w-[93%] my-1 mx-auto bg-[#E8E6f1] h-[2px]"></div>
 
                    </div>
                     
                     <div className="w-full flex gap-2 mt-3 justify-start  items-center">
                         <span className="w-3 h-3 rounded-full mt-[2px] ml-2 bg-green-400"></span>
-                        <p className="text-sm text-gray-400">Shipping & taxes calculated at checkout</p>
+                        <p className="text-[12px] text-[#8A91AB]">Shipping & taxes calculated at checkout</p>
                     </div>
                     <div className="w-[100%] flex justify-center items-center  ">
-                        <button className="bg-[#19D16F] w-full mt-4 mx-3 py-1 px-4 text-white">Proceed To Checkout</button>
+                        <button className="bg-[#19D16F] w-full mt-4 mx-0 py-1 px-4 font-poppins text-white">Proceed To Checkout</button>
                     </div>
                 </div>
         </div>  
         <div class="w-[90%]  mt-2 p-3 ">  
-            <h2 class="text-xl font-bold mb-4">Calculate Shopping</h2>  
-            <div className="w-[97%] flex gap-4 flex-col mx-auto bg-[#F4F4FC] py-7 p-2 rounded-md">
+            <h2 class="text-xl font-bold font-josefin mb-4">Calculate Shopping</h2>  
+            <div className="w-[97%] flex gap-4  flex-col mx-auto bg-[#F4F4FC] py-7 p-2 rounded-md">
                    
                    <div className="w-[97%] mx-auto  flex border-b-2 border-gray-300 py-1 space-y-2 flex-col ">
-                    <input type="text" placeholder="Bangladesh" className="px-2 outline-none bg-transparent" name="" id="" />
+                    <input type="text" placeholder="Bangladesh" className="px-2 placeholder:text-[#C5CBE3] outline-none bg-transparent" name="" id="" />
                    </div>
                    <div className="w-[97%] mx-auto  flex border-b-2 border-gray-300 py-1 space-y-2 flex-col ">
-                    <input type="text" placeholder="Bangladesh" className="px-2 outline-none bg-transparent" name="" id="" />
+                    <input type="text" placeholder="Mirpur Dhaka - 1200" className="px-2 outline-none placeholder:text-[#C5CBE3] bg-transparent" name="" id="" />
                    </div>
+                   
                    <div className="w-[97%] mx-auto flex border-b-2 border-gray-300 py-1 space-y-2 flex-col ">
-                    <input type="text" placeholder="Bangladesh" className="px-2 outline-none bg-transparent" name="" id="" />
+                    <input type="text" placeholder="Postal Code" className="px-2 outline-none placeholder:text-[#C5CBE3] bg-transparent" name="" id="" />
                    </div>
                     
                     
-                    <div className="flex justify-center items-center  ">
-                        <button className="bg-[#19D16F] w-full mt-4 mx-3 py-1 px-4 text-white">Proceed To Checkout</button>
+                    <div className="text-left m-0">
+                        <button className="bg-[#FB2E86] rounded-[2px]  mt-4 mx-0 py-1 px-4 text-white font-josefin text-[16px]">Calculate Shiping</button>
                     </div>
                 </div>
         </div> 

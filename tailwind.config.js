@@ -33,12 +33,16 @@ module.exports = {
 			"inter":[ "Inter", "serif"],
 			'poppins':["Poppins"],
 			'josefin':["Josefin Sans"],
+			'Lato' :["Lato"],
 		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
+		boxShadow:{
+			custom : '0px 0px 25px 10px #F6F4FD'
+		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

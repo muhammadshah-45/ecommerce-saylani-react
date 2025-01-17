@@ -1,7 +1,7 @@
 import React from 'react'
-import twitter from '../../src/assets/productimages/icon1.png'
-import facebook from '../../src/assets/productimages/icon3.png'
-import instagram from '../../src/assets/productimages/icon2.png'
+import twitter from '../../src/assets/social-icons/icon1.png'
+import facebook from '../../src/assets/social-icons/icon3.png'
+import instagram from '../../src/assets/social-icons/icon2.png'
 
 export const Footer = () => {
   return (

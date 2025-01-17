@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Contact = () => {
+const Shop = () => {
   return (
     <div className='flex w-full text-3xl text-white h-[50vh] bg-orange-400 justify-center items-center'>
-      Contact Page
+      Shop Page
     </div>
   )
 }
 
-export default Contact
+export default Shop
